@@ -1,15 +1,228 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="ar">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Silent Hill</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silent Hill - الأمن السيبراني والتحقيقات الجنائية الرقمية</title>
+    <!-- استيراد Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* لون خلفية داكن جداً */
+            color: #c9d1d9; /* لون نص فاتح للتباين */
+            line-height: 1.6;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #6c73ff, #8a2be2); /* تدرج لوني جذاب */
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-primary {
+            background-image: linear-gradient(to right, #6c73ff 0%, #8a2be2 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(108, 115, 255, 0.4);
+        }
+        .border-gradient {
+            border: 2px solid;
+            border-image: linear-gradient(to right, #6c73ff, #8a2be2) 1;
+        }
+        .icon-link {
+            transition: color 0.3s ease;
+        }
+        .icon-link:hover {
+            color: #6c73ff; /* لون أزرق عند التحويم */
+        }
+    </style>
 </head>
-<body class="bg-gray-900 text-white font-sans text-center p-10">
-  <h1 class="text-5xl font-bold mb-6">مرحبا بك في Silent Hill</h1>
-  <p class="text-xl">شركة متخصصة في الأمن السيبراني والتحقيقات الرقمية.</p>
-  <p class="mt-6">📧 ahmed1elkholy1@gmail.com</p>
-  <p>📱 +201101467118</p>
+<body class="antialiased">
+
+    <!-- شريط التنقل العلوي -->
+    <header class="bg-gray-900 shadow-lg py-4 px-6 md:px-12 fixed w-full z-50">
+        <nav class="flex justify-between items-center max-w-7xl mx-auto">
+            <a href="#" class="text-3xl font-bold gradient-text rounded-lg">Silent Hill</a>
+            <div class="md:hidden">
+                <button id="menu-button" class="text-white focus:outline-none">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+            <ul id="nav-menu" class="hidden md:flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 text-lg">
+                <li><a href="#" class="block py-2 px-4 text-white hover:text-indigo-400 rounded-md transition duration-300">الرئيسية</a></li>
+                <li><a href="#services" class="block py-2 px-4 text-white hover:text-indigo-400 rounded-md transition duration-300">خدماتنا</a></li>
+                <li><a href="#about" class="block py-2 px-4 text-white hover:text-indigo-400 rounded-md transition duration-300">من نحن</a></li>
+                <li><a href="#contact" class="block py-2 px-4 text-white hover:text-indigo-400 rounded-md transition duration-300">اتصل بنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- قسم الأبطال (Hero Section) -->
+    <section class="relative h-screen flex items-center justify-center text-center bg-cover bg-center"
+        style="background-image: url('https://placehold.co/1920x1080/1a202c/6c73ff?text=Cybersecurity+Background');">
+        <div class="absolute inset-0 bg-black opacity-70"></div>
+        <div class="relative z-10 p-6 max-w-4xl mx-auto">
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 leading-tight text-white">
+                حماية <span class="gradient-text">عالمك الرقمي</span> من التهديدات الخفية
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 mb-10">
+                نحن نقدم حلول أمن سيبراني متقدمة وتحقيقات جرائم إلكترونية لمساعدتك في الدفاع عن أصولك الأكثر قيمة.
+            </p>
+            <a href="#contact" class="btn-primary text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300">
+                تواصل معنا الآن
+            </a>
+        </div>
+    </section>
+
+    <!-- قسم الخدمات -->
+    <section id="services" class="py-16 md:py-24 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white">خدماتنا الأمنية المتقدمة</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- خدمة 1 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border-gradient transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/80x80/6c73ff/ffffff?text=🛡️" alt="Cybersecurity Consulting Icon" class="mx-auto mb-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">استشارات الأمن السيبراني</h3>
+                    <p class="text-gray-300">
+                        تقييم شامل للمخاطر وتطوير استراتيجيات أمنية مخصصة لحماية بياناتك وأنظمتك.
+                    </p>
+                </div>
+                <!-- خدمة 2 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border-gradient transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/80x80/6c73ff/ffffff?text=🔍" alt="Digital Forensics Icon" class="mx-auto mb-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">التحقيقات الجنائية الرقمية</h3>
+                    <p class="text-gray-300">
+                        كشف وتتبع الجرائم الإلكترونية واستعادة الأدلة الرقمية لتقديمها للمحاكمة.
+                    </p>
+                </div>
+                <!-- خدمة 3 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border-gradient transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/80x80/6c73ff/ffffff?text=🚨" alt="Incident Response Icon" class="mx-auto mb-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">الاستجابة للحوادث</h3>
+                    <p class="text-gray-300">
+                        التعامل الفوري مع الهجمات السيبرانية وتقليل الأضرار وضمان التعافي السريع.
+                    </p>
+                </div>
+                <!-- خدمة 4 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border-gradient transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/80x80/6c73ff/ffffff?text=🎓" alt="Training Icon" class="mx-auto mb-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">تدريب وتوعية</h3>
+                    <p class="text-gray-300">
+                        برامج تدريبية لرفع الوعي الأمني للموظفين وتعزيز الدفاعات البشرية ضد الهجمات.
+                    </p>
+                </div>
+                <!-- خدمة 5 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border-gradient transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/80x80/6c73ff/ffffff?text=🧪" alt="Penetration Testing Icon" class="mx-auto mb-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">اختبار الاختراق</h3>
+                    <p class="text-gray-300">
+                        محاكاة الهجمات لاكتشاف نقاط الضعف في أنظمتك قبل أن يستغلها المخترقون.
+                    </p>
+                </div>
+                <!-- خدمة 6 -->
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg border-gradient transform hover:scale-105 transition duration-300">
+                    <img src="https://placehold.co/80x80/6c73ff/ffffff?text=⚖️" alt="Compliance Icon" class="mx-auto mb-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-white">الامتثال والتنظيم</h3>
+                    <p class="text-gray-300">
+                        مساعدة الشركات على الامتثال للوائح الأمن السيبراني والمعايير القانونية.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم من نحن -->
+    <section id="about" class="py-16 md:py-24 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="md:w-1/2 text-center md:text-right">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 text-white">من نحن</h2>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed mb-6">
+                    Silent Hill هي شركة رائدة في الأمن السيبراني والتحقيقات الجنائية الرقمية، مرخصة في الولايات المتحدة الأمريكية. نحن نلتزم بأعلى معايير الدقة والسرية لتقديم حلول أمنية متكاملة لعملائنا.
+                </p>
+                <p class="text-lg md:text-xl text-gray-300 leading-relaxed">
+                    فريقنا يتكون من خبراء متخصصين لديهم سنوات من الخبرة في مواجهة أعقد التحديات السيبرانية، لضمان سلامة وأمن بياناتك وأعمالك.
+                </p>
+            </div>
+            <div class="md:w-1/2">
+                <img src="https://placehold.co/600x400/2d3748/6c73ff?text=Our+Team+Image" alt="فريق Silent Hill" class="rounded-xl shadow-2xl w-full h-auto">
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم اتصل بنا -->
+    <section id="contact" class="py-16 md:py-24 bg-gray-900 text-center">
+        <div class="max-w-4xl mx-auto px-6 md:px-12">
+            <h2 class="text-4xl md:text-5xl font-bold mb-12 text-white">تواصل معنا</h2>
+            <p class="text-lg md:text-xl text-gray-300 mb-8">
+                نحن هنا لمساعدتك في تأمين عالمك الرقمي. لا تتردد في التواصل معنا.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12">
+                <div class="flex items-center space-x-4">
+                    <img src="https://placehold.co/40x40/6c73ff/ffffff?text=📧" alt="Email Icon" class="w-10 h-10">
+                    <a href="mailto:ahmed1elkholy1@gmail.com" class="text-white text-lg md:text-xl hover:text-indigo-400 transition duration-300 icon-link">
+                        ahmed1elkholy1@gmail.com
+                    </a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <img src="https://placehold.co/40x40/6c73ff/ffffff?text=📱" alt="WhatsApp Icon" class="w-10 h-10">
+                    <a href="https://wa.me/201101467118" target="_blank" class="text-white text-lg md:text-xl hover:text-indigo-400 transition duration-300 icon-link">
+                        +20 1101467118
+                    </a>
+                </div>
+            </div>
+            <!-- يمكنك إضافة نموذج اتصال هنا -->
+            <!-- <form class="bg-gray-800 p-8 rounded-xl shadow-lg max-w-2xl mx-auto">
+                <div class="mb-6">
+                    <input type="text" placeholder="اسمك الكامل" class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div class="mb-6">
+                    <input type="email" placeholder="بريدك الإلكتروني" class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div class="mb-6">
+                    <textarea placeholder="رسالتك" rows="6" class="w-full p-4 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+                </div>
+                <button type="submit" class="btn-primary text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:shadow-xl transition duration-300 w-full">
+                    أرسل الرسالة
+                </button>
+            </form> -->
+        </div>
+    </section>
+
+    <!-- تذييل الصفحة -->
+    <footer class="bg-gray-900 py-8 px-6 md:px-12 text-center text-gray-400 text-sm border-t border-gray-700">
+        <p>&copy; 2025 Silent Hill. جميع الحقوق محفوظة.</p>
+        <p class="mt-2">مرخصون في الولايات المتحدة الأمريكية</p>
+    </footer>
+
+    <!-- JavaScript للتعامل مع قائمة التنقل في الجوال -->
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function() {
+            var navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('hidden');
+            navMenu.classList.toggle('flex');
+            navMenu.classList.toggle('flex-col');
+            navMenu.classList.toggle('bg-gray-800');
+            navMenu.classList.toggle('rounded-lg');
+            navMenu.classList.toggle('p-4');
+            navMenu.classList.toggle('absolute');
+            navMenu.classList.toggle('top-full');
+            navMenu.classList.toggle('left-0');
+            navMenu.classList.toggle('w-full');
+            navMenu.classList.toggle('shadow-lg');
+        });
+
+        // إغلاق قائمة التنقل عند النقر على رابط (للموبايل)
+        document.querySelectorAll('#nav-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                var navMenu = document.getElementById('nav-menu');
+                if (!navMenu.classList.contains('hidden')) {
+                    navMenu.classList.add('hidden');
+                    navMenu.classList.remove('flex', 'flex-col', 'bg-gray-800', 'rounded-lg', 'p-4', 'absolute', 'top-full', 'left-0', 'w-full', 'shadow-lg');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
